@@ -28,6 +28,7 @@ The code is released for academic research use only. For commercial use, please 
 - Install [cuDNN7.5](https://developer.nvidia.com/cudnn)
 - Install [Anaconda3](https://www.anaconda.com/distribution/)
 - Install required python pakcages
+    - `conda create -n FUNIT python=3.7`
     - `conda install -y pytorch torchvision cudatoolkit=10.0 -c pytorch`
     - `conda install -y -c anaconda pip`
     - `pip install pyyaml tensorboardX`
@@ -95,8 +96,11 @@ by using a set of 5 example meerkat images
 
 ![](images/n02138411/n02138441_75-167_65_407_273_0.999893.jpg)![](images/n02138411/n02138441_280-143_11_438_245_0.999972.jpg)![](images/n02138411/n02138441_390-123_44_362_247_0.999989.jpg)![](images/n02138411/n02138441_763-141_168_340_352_0.999998.jpg)![](images/n02138411/n02138441_1512-174_67_408_267_0.999992.jpg)
 
+### Video
 
-
+```bash
+python test_k_shot_video.py --config configs/funit_animals.yaml --ckpt pretrained/animal149_gen.pt --input images/input_content.jpg --class_image_folder images/n02138411 --output images/output.jpg
+```
 
 ### Citation
 If you use this code for your research, please cite our papers.
